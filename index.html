@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in JS</title>
+    <style>
+        pre{
+            display: inline-block;
+            border: 2px solid skyblue;
+            margin-left: 30px;
+            padding: 20px 20px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-decoration: underline; color: blue;">Object in JS</h1>
+    <h2>1. Create a Function</h2>
+    <pre style="font-size: 17px; font-family:cursive">
+        function Check(obj1){
+            obj1.setter=function(){
+              console.log(obj1.name);
+            }
+        }
+    </pre>
+    <h2>2. Delete a Parameter</h2>
+    <pre style="font-size: 17px; font-family:cursive">
+        function Check(obj1) {
+            let del=delete obj1.rollno;
+            return del;
+            }
+    </pre>
+    <h2>3. Check whether the Package is Dream Package or not</h2>
+    <pre style="font-size: 17px; font-family:cursive">
+        function Check(obj1) {
+               if(obj1.salary>500000){
+                 return "Dream"
+                }
+               else{
+                 return "NotDream"
+                }
+        }
+    </pre>
+    <h2>4. Check whether the Object has a parameter or not</h2>
+    <pre style="font-size: 17px; font-family:cursive">
+        function Check(obj1) {
+            let count=0;
+            for(let i in obj1){
+              count++;
+            }
+            if(count===0){
+              return "false"
+            }
+            return "true"
+        }
+    </pre>
+    <h2>5. Merge the Objects</h2>
+    <pre style="font-size: 17px; font-family:cursive">
+        function Check(obj1,obj2) {
+            return Object.assign({},obj1,obj2)
+        }
+    </pre>
+    <h2>6. Object Multiplyer</h2>
+    <pre style="font-size: 17px; font-family:cursive">
+        function Check(a,obj1) {
+            obj1.id=obj1.id*a;
+            obj1.houseno=obj1.houseno*a;
+            return obj1
+        }
+    </pre>
+    <h2>7. Find the  sum of Object Members</h2>
+    <pre style="font-size: 17px; font-family:cursive">
+        function Check(obj1) {
+            return obj1.p1+obj1.p2+obj1.p3 
+        }
+    </pre>
+</body>
+</html>
